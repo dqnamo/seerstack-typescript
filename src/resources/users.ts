@@ -4,20 +4,20 @@ import { APIResource } from '../core/resource';
 import { APIPromise } from '../core/api-promise';
 import { RequestOptions } from '../internal/request-options';
 
-export class Identify extends APIResource {
+export class Users extends APIResource {
   /**
    * Identify a user
    */
-  create(body: IdentifyCreateParams, options?: RequestOptions): APIPromise<IdentifyCreateResponse> {
+  identify(body: UserIdentifyParams, options?: RequestOptions): APIPromise<UserIdentifyResponse> {
     return this._client.post('/identify', { body, ...options });
   }
 }
 
-export interface IdentifyCreateResponse {
+export interface UserIdentifyResponse {
   success: boolean;
 }
 
-export interface IdentifyCreateParams {
+export interface UserIdentifyParams {
   user_id: string;
 
   attributes?: { [key: string]: unknown };
@@ -27,9 +27,6 @@ export interface IdentifyCreateParams {
   name?: string;
 }
 
-export declare namespace Identify {
-  export {
-    type IdentifyCreateResponse as IdentifyCreateResponse,
-    type IdentifyCreateParams as IdentifyCreateParams,
-  };
+export declare namespace Users {
+  export { type UserIdentifyResponse as UserIdentifyResponse, type UserIdentifyParams as UserIdentifyParams };
 }

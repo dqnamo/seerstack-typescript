@@ -16,8 +16,8 @@ import * as Errors from './core/error';
 import * as Uploads from './core/uploads';
 import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
-import { Capture, CaptureCreateParams, CaptureCreateResponse } from './resources/capture';
-import { Identify, IdentifyCreateParams, IdentifyCreateResponse } from './resources/identify';
+import { EventCaptureParams, EventCaptureResponse, Events } from './resources/events';
+import { UserIdentifyParams, UserIdentifyResponse, Users } from './resources/users';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
 import { FinalRequestOptions, RequestOptions } from './internal/request-options';
@@ -715,25 +715,25 @@ export class Seerstack {
 
   static toFile = Uploads.toFile;
 
-  capture: API.Capture = new API.Capture(this);
-  identify: API.Identify = new API.Identify(this);
+  events: API.Events = new API.Events(this);
+  users: API.Users = new API.Users(this);
 }
 
-Seerstack.Capture = Capture;
-Seerstack.Identify = Identify;
+Seerstack.Events = Events;
+Seerstack.Users = Users;
 
 export declare namespace Seerstack {
   export type RequestOptions = Opts.RequestOptions;
 
   export {
-    Capture as Capture,
-    type CaptureCreateResponse as CaptureCreateResponse,
-    type CaptureCreateParams as CaptureCreateParams,
+    Events as Events,
+    type EventCaptureResponse as EventCaptureResponse,
+    type EventCaptureParams as EventCaptureParams,
   };
 
   export {
-    Identify as Identify,
-    type IdentifyCreateResponse as IdentifyCreateResponse,
-    type IdentifyCreateParams as IdentifyCreateParams,
+    Users as Users,
+    type UserIdentifyResponse as UserIdentifyResponse,
+    type UserIdentifyParams as UserIdentifyParams,
   };
 }

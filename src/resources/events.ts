@@ -4,20 +4,20 @@ import { APIResource } from '../core/resource';
 import { APIPromise } from '../core/api-promise';
 import { RequestOptions } from '../internal/request-options';
 
-export class Capture extends APIResource {
+export class Events extends APIResource {
   /**
    * Capture an event
    */
-  create(body: CaptureCreateParams, options?: RequestOptions): APIPromise<CaptureCreateResponse> {
+  capture(body: EventCaptureParams, options?: RequestOptions): APIPromise<EventCaptureResponse> {
     return this._client.post('/capture', { body, ...options });
   }
 }
 
-export interface CaptureCreateResponse {
+export interface EventCaptureResponse {
   success: boolean;
 }
 
-export interface CaptureCreateParams {
+export interface EventCaptureParams {
   name: string;
 
   data?: { [key: string]: unknown };
@@ -27,9 +27,6 @@ export interface CaptureCreateParams {
   user_id?: string;
 }
 
-export declare namespace Capture {
-  export {
-    type CaptureCreateResponse as CaptureCreateResponse,
-    type CaptureCreateParams as CaptureCreateParams,
-  };
+export declare namespace Events {
+  export { type EventCaptureResponse as EventCaptureResponse, type EventCaptureParams as EventCaptureParams };
 }
