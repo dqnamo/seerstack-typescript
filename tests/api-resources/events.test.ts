@@ -7,10 +7,10 @@ const client = new Seerstack({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
-describe('resource identify', () => {
+describe('resource events', () => {
   // Prism tests are disabled
-  test.skip('create: only required params', async () => {
-    const responsePromise = client.identify.create({ user_id: 'user_id' });
+  test.skip('capture: only required params', async () => {
+    const responsePromise = client.events.capture({ name: 'name' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -21,12 +21,12 @@ describe('resource identify', () => {
   });
 
   // Prism tests are disabled
-  test.skip('create: required and optional params', async () => {
-    const response = await client.identify.create({
-      user_id: 'user_id',
-      attributes: { foo: 'bar' },
-      email: 'dev@stainless.com',
+  test.skip('capture: required and optional params', async () => {
+    const response = await client.events.capture({
       name: 'name',
+      data: { foo: 'bar' },
+      timestamp: '2019-12-27T18:11:19.117Z',
+      user_id: 'user_id',
     });
   });
 });

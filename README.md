@@ -29,9 +29,9 @@ const client = new Seerstack({
   apiKey: process.env['SEERSTACK_API_KEY'], // This is the default and can be omitted
 });
 
-const capture = await client.capture.create({ name: 'REPLACE_ME' });
+const response = await client.events.capture({ name: 'REPLACE_ME' });
 
-console.log(capture.success);
+console.log(response.success);
 ```
 
 ### Request & Response types
@@ -46,8 +46,8 @@ const client = new Seerstack({
   apiKey: process.env['SEERSTACK_API_KEY'], // This is the default and can be omitted
 });
 
-const params: Seerstack.CaptureCreateParams = { name: 'REPLACE_ME' };
-const capture: Seerstack.CaptureCreateResponse = await client.capture.create(params);
+const params: Seerstack.EventCaptureParams = { name: 'REPLACE_ME' };
+const response: Seerstack.EventCaptureResponse = await client.events.capture(params);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -60,7 +60,7 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-const capture = await client.capture.create({ name: 'REPLACE_ME' }).catch(async (err) => {
+const response = await client.events.capture({ name: 'REPLACE_ME' }).catch(async (err) => {
   if (err instanceof Seerstack.APIError) {
     console.log(err.status); // 400
     console.log(err.name); // BadRequestError
@@ -100,7 +100,7 @@ const client = new Seerstack({
 });
 
 // Or, configure per-request:
-await client.capture.create({ name: 'REPLACE_ME' }, {
+await client.events.capture({ name: 'REPLACE_ME' }, {
   maxRetries: 5,
 });
 ```
@@ -117,7 +117,7 @@ const client = new Seerstack({
 });
 
 // Override per-request:
-await client.capture.create({ name: 'REPLACE_ME' }, {
+await client.events.capture({ name: 'REPLACE_ME' }, {
   timeout: 5 * 1000,
 });
 ```
@@ -140,15 +140,15 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 ```ts
 const client = new Seerstack();
 
-const response = await client.capture.create({ name: 'REPLACE_ME' }).asResponse();
+const response = await client.events.capture({ name: 'REPLACE_ME' }).asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: capture, response: raw } = await client.capture
-  .create({ name: 'REPLACE_ME' })
+const { data: response, response: raw } = await client.events
+  .capture({ name: 'REPLACE_ME' })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(capture.success);
+console.log(response.success);
 ```
 
 ### Logging
@@ -228,7 +228,7 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.capture.create({
+client.events.capture({
   // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
