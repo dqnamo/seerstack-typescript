@@ -11,11 +11,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 ## Installation
 
 ```sh
-npm install git+ssh://git@github.com:dqnamo/seerstack-typescript.git
+npm install seerstack
 ```
-
-> [!NOTE]
-> Once this package is [published to npm](https://www.stainless.com/docs/guides/publish), this will become: `npm install seerstack`
 
 ## Usage
 
