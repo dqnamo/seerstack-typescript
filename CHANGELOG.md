@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.1 (2026-01-17)
+
+Full Changelog: [v0.1.0...v0.1.1](https://github.com/dqnamo/seerstack-typescript/compare/v0.1.0...v0.1.1)
+
+### Chores
+
+* **internal:** update `actions/checkout` version ([6bee5ca](https://github.com/dqnamo/seerstack-typescript/commit/6bee5ca4817361563badcd4741116b9c50cc464e))
+* **internal:** update lock file ([86c88fc](https://github.com/dqnamo/seerstack-typescript/commit/86c88fcc8db161c14231c44a9c4376c41d605e09))
+* **internal:** upgrade babel, qs, js-yaml ([641cb9f](https://github.com/dqnamo/seerstack-typescript/commit/641cb9fdcb8fe7bfe51b5dff39aca50417aae239))
+* **internal:** upgrade brace-expansion and @babel/helpers ([401bb08](https://github.com/dqnamo/seerstack-typescript/commit/401bb08575812f47b396dc54d6cd91f65add0bc6))
+
 ## 0.1.0 (2026-01-06)
 
 Full Changelog: [v0.0.1...v0.1.0](https://github.com/dqnamo/seerstack-typescript/compare/v0.0.1...v0.1.0)
