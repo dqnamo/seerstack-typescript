@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.3 (2026-02-06)
+
+Full Changelog: [v0.1.2...v0.1.3](https://github.com/dqnamo/seerstack-typescript/compare/v0.1.2...v0.1.3)
+
+### Chores
+
+* **internal:** upgrade pnpm ([813f0b1](https://github.com/dqnamo/seerstack-typescript/commit/813f0b1893133bdb355c35ab62776be97766c1eb))
+
 ## 0.1.2 (2026-02-06)
 
 Full Changelog: [v0.1.1...v0.1.2](https://github.com/dqnamo/seerstack-typescript/compare/v0.1.1...v0.1.2)
