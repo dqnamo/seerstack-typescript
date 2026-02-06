@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.2 (2026-02-06)
+
+Full Changelog: [v0.1.1...v0.1.2](https://github.com/dqnamo/seerstack-typescript/compare/v0.1.1...v0.1.2)
+
+### Bug Fixes
+
+* **client:** avoid removing abort listener too early ([eb3c57b](https://github.com/dqnamo/seerstack-typescript/commit/eb3c57bf68567d7d93b51ca1b39cc1bc2cd984db))
+
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([36b4b76](https://github.com/dqnamo/seerstack-typescript/commit/36b4b764d2b58c1398823740cf80e431ebdf0b4f))
+* **client:** restructure abort controller binding ([f2180e8](https://github.com/dqnamo/seerstack-typescript/commit/f2180e8120e23a33b36c7afeb08ccf3fc6d18c5a))
+
 ## 0.1.1 (2026-02-03)
 
 Full Changelog: [v0.1.0...v0.1.1](https://github.com/dqnamo/seerstack-typescript/compare/v0.1.0...v0.1.1)
