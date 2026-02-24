@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.3 (2026-02-24)
+
+Full Changelog: [v0.1.2...v0.1.3](https://github.com/dqnamo/seerstack-typescript/compare/v0.1.2...v0.1.3)
+
+### Bug Fixes
+
+* **docs/contributing:** correct pnpm link command ([eaa42fc](https://github.com/dqnamo/seerstack-typescript/commit/eaa42fcb6647dae2795e77871871902676cd5dc2))
+
+
+### Chores
+
+* **internal/client:** fix form-urlencoded requests ([286a4ef](https://github.com/dqnamo/seerstack-typescript/commit/286a4efaeee3aeb977544432747939c8c22a640a))
+* **internal:** avoid type checking errors with ts-reset ([1e03c93](https://github.com/dqnamo/seerstack-typescript/commit/1e03c930479e7af9d2673e850b1cac34268afd75))
+* **internal:** remove mock server code ([5f0a1a8](https://github.com/dqnamo/seerstack-typescript/commit/5f0a1a8b50e9922575b47f3c9f3a2c572da0124d))
+* **internal:** upgrade pnpm ([813f0b1](https://github.com/dqnamo/seerstack-typescript/commit/813f0b1893133bdb355c35ab62776be97766c1eb))
+* **internal:** upgrade pnpm version ([47c7d8c](https://github.com/dqnamo/seerstack-typescript/commit/47c7d8cd181828048161e1c18421782b723f039a))
+* update mock server docs ([f4cdf38](https://github.com/dqnamo/seerstack-typescript/commit/f4cdf38aa85cf7f891604e2a7e5409d2c1b4c743))
+
 ## 0.1.2 (2026-02-06)
 
 Full Changelog: [v0.1.1...v0.1.2](https://github.com/dqnamo/seerstack-typescript/compare/v0.1.1...v0.1.2)
