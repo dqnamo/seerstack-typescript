@@ -60,7 +60,7 @@ $ yarn link seerstack
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global seerstack
+$ pnpm link --global seerstack
 ```
 
 ## Running tests
